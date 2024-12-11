@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar de Copas</title>
+    <link rel="stylesheet" href="bardecopas.css">
+</head>
+<body>
+    <header>
+    <div class="cabecera">
+        <img width="50%" height="400vh" src="imagenes/letrero.jpg" alt="" class="dupar">
+    </div>
+    </header>
+    <div class="navbar">
+        <div class="nav-item">
+            <a href="#carta" class="nav-link">Carta</a>
+        </div>
+        <div class="nav-item">
+            <a href="#local" class="nav-link">Partes del local</a>
+            <div class="dropdown">
+                <a href="#local" class="dropdown-item">Local</a>
+                <a href="#barra" class="dropdown-item">Barra</a>
+                <a href="#relax" class="dropdown-item">Relax</a>
+            </div>
+        </div>
+    </div>
+    <div class="inicio">
+    <h2>DUPAR</h2>
+    <p>Bienvenido a la cocteleria donde puedes disfrutar de tu tiempo con tus colegas mientras os bebeis un coctel, una cubata, fumais una cachimba...</p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="intro">
+        <h2 id="local">Local</h2>
+        <p>El local tiene un toque moderno con un ambiente muy tranquila <br><br> dentro tiene unas luces leds moradas que hacen que ilumine en la sala para que no se ve ni tan oscuro,  ni tan brilloso <br><br> eso lo que hace es que lo clientes pues pueda tener es tranquilidad en la sala. Hay varios tipos de salas como la de bar que es con una barra o una de relax con sofa </p>
+        <img width="40%" height="40%" src="imagenes/barr2.jpg" alt="" class="barr">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="intro">
+        <h2 id="barra">Barra</h2>
+        <p>La zona de barra es para las personas que quieran pasar el rato con las gente que les rodea, con el camarero, con los colegas. <br><br> En la barra se puede pedir tanto bebidas y cocteles, y algo para picar con la bebida. <br><br> Las cachimbas no se pueden pedir ya que no es una zona para fumar</p>
+        <img width="35%" height="40%" src="imagenes/barra.jpg" alt="" class="barra">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="intro">
+        <h2 id="relax">Relax</h2>
+        <p>Esa zona es mas para gente que vienen en grupo y quiera estar comodos mientras charlan entre ellos, juegan a poker, etc... <br><br> En esa sala se sirve lo mismo que en la barra pero incluyendo cachimbas y si se puede fumar ya sea cachimba o vapers que tambiene esta permitido</p>
+        <img width="35%" height="40%" id="imagen" src="imagenes/relax1.jpg" alt="Imagen" class="relax">    
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="carta">
+        <h2 id="carta">Carta</h2>
+        <p>Esa es la carta donde puedes pedir lo que tu quieras</p>
+        <img width=40%" height="50%" src="imagenes/carta.jpg" alt="" class="cart">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="button" onclick="location.href='Categorias.html'">volver<span class="button-border"></span></div>
+    
+    <script>
+        // Array de imágenes
+        const imagenes = [
+            'imagenes/relax1.jpg',
+            'imagenes/relax2.jpg'
+        ];
+
+        let indice = 0; // Índice de la imagen actual
+
+        // Función para cambiar la imagen
+        function cambiarImagen() {
+            // Cambiar la imagen
+            indice = (indice + 1) % imagenes.length; // Cambia al siguiente índice
+            document.getElementById('imagen').src = imagenes[indice]; // Actualiza la fuente de la imagen
+        }
+
+        // Cambiar imagen cada 3 segundos (3000 milisegundos)
+        setInterval(cambiarImagen, 5000);
+    </script>
+
+</body>
+</html>

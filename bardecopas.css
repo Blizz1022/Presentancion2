@@ -1,0 +1,248 @@
+body {
+  --color: rgba(42, 0, 87, 0.8);
+  background-color: rgb(0, 0, 0);
+  background-size: 40px 40px;
+  background-image: linear-gradient(45deg, var(--color), transparent 40%), 
+                    linear-gradient(-90deg, var(--color), transparent 20%);
+  height: 600vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales */
+.cabecera {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  background-image: linear-gradient(
+    32deg,
+    rgba(8, 8, 8, 0.74) 30px,
+    transparent
+  );
+  background-size: 60px 60px;
+  background-position: -5px -5px;
+}
+
+.inicio h2, .intro h2, .carta h2 {
+  color: rgb(119, 0, 255);
+  text-align: center;
+  font-size: 4rem;
+  font-family: fantasy;
+}
+
+.inicio p, .intro p, .carta p {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.intro h3, .carta h3 {
+  color: rgb(119, 0, 255);
+  text-align: center;
+  font-size: 3rem;
+  font-family: fantasy;
+  margin: 2%;
+}
+
+/* Ajustes de posicionamiento para elementos específicos */
+.dupar, .barr, .barra, .relax, .cart {
+  position: relative; left: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar > .nav-item {
+  float: left;
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+  transition: background 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #575757;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown .dropdown-item {
+  padding: 10px;
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown .dropdown-item:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .inicio h2, .intro h2, .carta h2 {
+    font-size: 3rem;
+  }
+
+  .inicio p, .intro p, .carta p {
+    font-size: 1.5rem;
+  }
+
+  .intro h3, .carta h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .inicio h2, .intro h2, .carta h2 {
+    font-size: 2.5rem;
+  }
+
+  .inicio p, .intro p, .carta p {
+    font-size: 1.2rem;
+  }
+
+  .intro h3, .carta h3 {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .navbar > .nav-item {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio h2, .intro h2, .carta h2 {
+    font-size: 1rem;
+  }
+
+  .inicio p, .intro p, .carta p {
+    font-size: 1rem;
+  }
+
+  .intro h3, .carta h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* From Uiverse.io by TaniaDou */ 
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f4f0ff;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+      180deg,
+      rgba(8, 77, 126, 0) 0%,
+      rgba(8, 77, 126, 0.42) 100%
+    ),
+    rgba(47, 255, 255, 0.24);
+  box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      180deg,
+      rgba(8, 77, 126, 0) 0%,
+      rgba(8, 77, 126, 0.42) 100%
+    ),
+    rgba(47, 255, 255, 0.24);
+  box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
+  border-radius: 0.5rem;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in;
+}
+
+.button:hover::after {
+  opacity: 1;
+}
+
+.button-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+.button-border::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.5rem;
+  padding: 1px;
+  inset: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(184, 238, 255, 0.24) 0%,
+      rgba(184, 238, 255, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(184, 238, 255, 0.32), rgba(184, 238, 255, 0.32));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
